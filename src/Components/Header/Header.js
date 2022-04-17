@@ -26,6 +26,7 @@ const Header = () => {
           <NavDropdown title="Other" id="offcanvasNavbarDropdown">
             <NavDropdown.Item as={Link} to="/blog">Blog</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/about">About</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/register">Register</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action5">
               Something else here

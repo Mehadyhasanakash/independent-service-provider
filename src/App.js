@@ -9,6 +9,7 @@ import CheckOut from './Components/CheckOut/CheckOut';
 import Blog from './Components/Blogs/Blog';
 import Login from './Components/Login/Login';
 import NotPound from './Components/NotPoundPage/NotPound';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         }></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
         <Route path='*' element={<NotPound></NotPound>}></Route>
       </Routes>
       
