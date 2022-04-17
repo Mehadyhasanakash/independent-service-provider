@@ -1,0 +1,107 @@
+[
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+        "category": "wedding-bor",
+        "name": " wedding-roni",
+        "seller": "Akash",
+        "price": 420,
+        "stock": 20,
+        "ratings": 4,
+        "ratingsCount": 3725,
+        "img": "serviceImage/service01.jpg",
+        "shipping": 1,
+        "quantity": 0
+      },
+      {
+        "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+        "category": "wedding-bor",
+        "name": "wedding-new-year",
+        "seller": "Akash",
+        "price": 196,
+        "stock": 19,
+        "ratings": 5,
+        "ratingsCount": 4355,
+        "img": "serviceImage/service02.jpg",
+        "shipping": 14,
+        "quantity": 0
+      },
+      {
+        "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+        "category": "wedding-bor",
+        "name": "wedding-hakim",
+        "seller": "Akash",
+        "price": 245,
+        "stock": 20,
+        "ratings": 4,
+        "ratingsCount": 3972,
+        "img": "serviceImage/service03.jpg",
+        "shipping": 1,
+        "quantity": 0
+      },
+      {
+        "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+        "category": "wedding-bor",
+        "name": "wedding-rohim",
+        "seller": "Akash",
+        "price": 229,
+        "stock": 10,
+        "ratings": 5,
+        "ratingsCount": 1764,
+        "img":"serviceImage/service04.jpg",
+        "shipping": 32,
+        "quantity": 0
+      },
+      {
+        "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
+        "category": "wedding-bor",
+        "name": "wedding-badal",
+        "seller": "Akash",
+        "price": 287,
+        "stock": 11,
+        "ratings": 4,
+        "ratingsCount": 799,
+        "img": "serviceImage/service05.jpg",
+        "shipping": 49,
+        "quantity": 0
+      },
+      {
+        "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
+        "category": "wedding-bor",
+        "name": "wedding-harami",
+        "seller": "Akash",
+        "price": 138,
+        "stock": 19,
+        "ratings": 3,
+        "ratingsCount": 4372,
+        "img": "serviceImage/service06.jpg",
+        "shipping": 19,
+        "quantity": 0
+      },
+      {
+        "id": "9c0c13c2-54e4-4001-809b-afbd9d84037d",
+        "category": "wedding-bor",
+        "name": "wedding-gola kata shamshu",
+        "seller": "Akash",
+        "price": 226,
+        "stock": 1,
+        "ratings": 4,
+        "ratingsCount": 2870,
+        "img": "serviceImage/service07.jpg",
+        "shipping": 15,
+        "quantity": 0
+      },
+      {
+        "id": "c9d1f410-d28f-49d9-9b01-d759b5acbeea",
+        "category": "wedding-bor",
+        "name": "wedding-harami-2",
+        "seller": "Akash",
+        "price": 319,
+        "stock": 7,
+        "ratings": 4,
+        "ratingsCount": 1360,
+        "img": "serviceImage/service08.jpg",
+        "shipping": 50,
+        "quantity": 0
+      }
+       
+]
