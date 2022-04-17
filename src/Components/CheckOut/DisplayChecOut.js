@@ -1,10 +1,11 @@
 import React from 'react';
 
-const DisplayService = (props) => {
+const DisplayCheckOut = (props) => {
     const {name, img, price, ratings, seller, category} = props.photo
-    const {ShowCheckOUt} = props
+
     return (
         <div>
+               <div>
              <div className="col">
     <div className="card">
       <img src={img} className="card-img-top" alt="..."/>
@@ -16,11 +17,12 @@ const DisplayService = (props) => {
         <h5 className="card-title">ratings: {ratings}</h5>
         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
-      <button onClick={ShowCheckOUt} type="button" className="btn btn-success">Check-out</button>
+      <button  type="button" className="btn btn-success">Check-out</button>
     </div>
   </div>
+        </div>
         </div>
     );
 };
 
-export default DisplayService;
+export default DisplayCheckOut;
