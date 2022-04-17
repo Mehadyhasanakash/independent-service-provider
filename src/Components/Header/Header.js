@@ -7,7 +7,7 @@ const Header = () => {
        <div className='bg-light'>
             <Navbar className='container' bg="light" sticky='top' expand={false}>
   <Container fluid>
-    <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+    <Navbar.Brand as={Link} to="/">Love logo</Navbar.Brand>
     <Navbar.Toggle aria-controls="offcanvasNavbar" />
     <Navbar.Offcanvas
       id="offcanvasNavbar"

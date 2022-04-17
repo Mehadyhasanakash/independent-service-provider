@@ -16,7 +16,7 @@ const DisplayService = (props) => {
         <h5 class="card-title">ratings: {ratings}</h5>
         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
-      <button onClick={ShowCheckOUt} type="button" class="btn btn-success">Success</button>
+      <button onClick={ShowCheckOUt} type="button" class="btn btn-success">Check-out</button>
     </div>
   </div>
         </div>
