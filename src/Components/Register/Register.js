@@ -11,7 +11,7 @@ import auth from '../../Firebase.init'
 const Register = () => {
     const nivigate = useNavigate()
 
-    const [ createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+    const [ createUserWithEmailAndPassword, user, error] = useCreateUserWithEmailAndPassword(auth);
     
     if(user){
             const path = '/chcekout'
@@ -22,17 +22,17 @@ const Register = () => {
     
 
 
-    const emailref = useRef('')
-    const userref = useRef('')
-    const passwordref = useRef('')
-    const confirmPasswordref = useRef('')
+    const emailRef = useRef('')
+    const userRef = useRef('')
+    const passwordRef = useRef('')
+    const confirmPasswordRef = useRef('')
 
     const hendalSubmit = (e) =>{
         e.preventDefault()
-        const email = emailref.current.value
-        const user = userref.current.value
-        const password = passwordref.current.value
-        const confirmPassword = confirmPasswordref.current.value
+        const email = emailRef.current.value
+        const user = userRef.current.value
+        const password = passwordRef.current.value
+        const confirmPassword = confirmPasswordRef.current.value
         createUserWithEmailAndPassword(email, user, password,confirmPassword)
     }
 
@@ -47,7 +47,7 @@ const Register = () => {
             <h1 className='text-center text-primary'>Register form</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
     <Form.Label>User Name</Form.Label>
-    <Form.Control ref={userref} type="Name" placeholder="Enter name" />
+    <Form.Control ref={userRef} type="Name" placeholder="Enter name" required />
     <Form.Text className="text-muted">
       We'll never share your user name with anyone else.
     </Form.Text>
@@ -55,7 +55,7 @@ const Register = () => {
 
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control ref={emailref} type="email" placeholder="Enter email" />
+    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
@@ -63,12 +63,12 @@ const Register = () => {
   
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control ref={passwordref} type="password" placeholder="Password" />
+    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword2">
     <Form.Label>Confirm Password</Form.Label>
-    <Form.Control ref={confirmPasswordref} type="Confirm password" placeholder="Confirm Password" />
+    <Form.Control ref={confirmPasswordRef} type="Confirm password" placeholder="Confirm Password" required />
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
