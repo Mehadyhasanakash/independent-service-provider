@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import usePhotographry from '../../useHook/useHook';
+import CheckOutItem from './CheckOutItem';
 import DisplayCheckOut from './DisplayChecOut';
 
 const CheckOut = () => {
 
     const [photos] = usePhotographry()
+    const [card, setCard] = useState([])
+
+    const hendalClick =(selectItem) =>{
+        const newItem =[...card, selectItem]
+        setCard(newItem)
+    }
 
 
 
@@ -19,13 +26,14 @@ const CheckOut = () => {
                             
                             key={photo.id}
                             photo={photo}
+                            hendalClick={hendalClick}
                             
                             ></DisplayCheckOut>)
                         }
                     </div>
                 </div>
                 <div className='col col-md-4 bg-danger'>
-                        
+                      <CheckOutItem card={card}> </CheckOutItem>  
                 </div>
 
             </div>

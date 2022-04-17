@@ -2,6 +2,7 @@ import React from 'react';
 
 const DisplayCheckOut = (props) => {
     const {name, img, price, ratings, seller, category} = props.photo
+    const {hendalClick} = props
 
     return (
         <div>
@@ -17,7 +18,7 @@ const DisplayCheckOut = (props) => {
         <h5 className="card-title">ratings: {ratings}</h5>
         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
-      <button  type="button" className="btn btn-success">Check-out</button>
+      <button onClick={()=> hendalClick(props.photo)} type="button" className="btn btn-success">Check-out</button>
     </div>
   </div>
         </div>
