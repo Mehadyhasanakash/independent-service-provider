@@ -15,9 +15,13 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/home' element={<Home/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/service' element={<Service/>}></Route>
-        <Route path='/checkout' element={<CheckOut/>}></Route>
+        <Route path='/checkout' element={
+
+          <CheckOut/>
+        }></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
       </Routes>
