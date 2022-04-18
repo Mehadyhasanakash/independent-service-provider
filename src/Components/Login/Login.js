@@ -1,33 +1,34 @@
 import { Button, Form, Nav } from 'react-bootstrap';
-import { useSignInWithGoogle, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init'
 import React, { useRef } from 'react';
+import GoogleSignin from '../GoogleSignIn/GoogleSignin';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+
 
 
 
 
 const Login = () => {
 
-
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
-    const [signInWithEmailAndPassword,] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
 
     if(user){
-        const path ='/checkout'
-        navigate(path)
+        
+        navigate('/checkout')
     }
 
-    const emailref = useRef('')
-    const passwordref = useRef('')
+    const emailRef = useRef('')
+    const passwordRef = useRef('')
 
     const hendalSubmit = (e) =>{
         e.preventDefault()
-        const email = emailref.current.value
-        const password = passwordref.current.value
-
-        signInWithEmailAndPassword(email, password)
+        const email = emailRef.current.value
+        const password = passwordRef.current.value
+          signInWithEmailAndPassword(email, password)
+          console.log(email,password)
+        
     }
 
     
@@ -41,7 +42,7 @@ const Login = () => {
             <h1 className='text-center text-success'>Login form</h1>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control ref={emailref} type="email" placeholder="Enter email" />
+    <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
@@ -49,7 +50,7 @@ const Login = () => {
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control ref={passwordref} type="password" placeholder="Password" />
+    <Form.Control ref={passwordRef} type="password" placeholder="Password" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
@@ -60,21 +61,9 @@ const Login = () => {
   <Nav.Link as={Link} to="/register"><h3 className='text-danger'>please click on  Register page!!!</h3></Nav.Link>
 </Form>
         </div>
-        <div className='row d-flex justify-content-center'>
-            <div className='col col-md-4 border-top w-25'>
-                
-            </div>
-            <div className='col col-md-4 d-grid justify-content-center'>
-                <h3 className='text-danger '>or</h3>
-                <br /> <br />
-                <button onClick={()=> signInWithGoogle()} type="button" className="btn btn-success">GoogleSignUP</button>
-                        
-            </div>
-            <div className='col col-md-4 border-top w-25'>
-           
-            </div>
+        
 
-        </div>
+      <GoogleSignin></GoogleSignin>
 
 
 </div>

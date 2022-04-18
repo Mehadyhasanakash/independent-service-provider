@@ -11,10 +11,10 @@ import auth from '../../Firebase.init'
 const Register = () => {
     const nivigate = useNavigate()
 
-    const [ createUserWithEmailAndPassword, user, error] = useCreateUserWithEmailAndPassword(auth);
+    const [ createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
     
     if(user){
-            const path = '/chcekout'
+            const path = '/checkout'
             nivigate(path)
             
         
@@ -23,17 +23,22 @@ const Register = () => {
 
 
     const emailRef = useRef('')
-    const userRef = useRef('')
+  
     const passwordRef = useRef('')
-    const confirmPasswordRef = useRef('')
+    
 
     const hendalSubmit = (e) =>{
         e.preventDefault()
         const email = emailRef.current.value
-        const user = userRef.current.value
         const password = passwordRef.current.value
-        const confirmPassword = confirmPasswordRef.current.value
-        createUserWithEmailAndPassword(email, user, password,confirmPassword)
+        
+          createUserWithEmailAndPassword(email, password)
+
+        
+        
+      
+  
+        // console.log(email, user, password, confirmPassword)
     }
 
     
@@ -45,13 +50,7 @@ const Register = () => {
         <div className='row'>
         <Form onSubmit={hendalSubmit} className='w-50 mx-auto mt-5 bg-light shadow p-3 mb-5 bg-body rounded'>
             <h1 className='text-center text-primary'>Register form</h1>
-        <Form.Group className="mb-3" controlId="formBasicName">
-    <Form.Label>User Name</Form.Label>
-    <Form.Control ref={userRef} type="Name" placeholder="Enter name" required />
-    <Form.Text className="text-muted">
-      We'll never share your user name with anyone else.
-    </Form.Text>
-  </Form.Group>
+     
 
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -66,10 +65,7 @@ const Register = () => {
     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword2">
-    <Form.Label>Confirm Password</Form.Label>
-    <Form.Control ref={confirmPasswordRef} type="Confirm password" placeholder="Confirm Password" required />
-  </Form.Group>
+  
 
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
@@ -83,20 +79,7 @@ const Register = () => {
  
 
 </Form>
-        {/* </div>
-        <div className='row d-flex justify-content-center'>
-            <div className='col col-md-4 border-top w-25'>
-                
-            </div>
-            <div className='col col-md-4 d-grid justify-content-center'>
-                <h3 className='text-danger '>or</h3>
-                <br /> <br />
-                <button onClick={()=> signInWithGoogle()} type="button" className="btn btn-success">GoogleSignUP</button>
-                        
-            </div>
-            <div className='col col-md-4 border-top w-25'>
-           
-            </div> */}
+        
 
         </div>
 

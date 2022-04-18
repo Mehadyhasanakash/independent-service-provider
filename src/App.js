@@ -10,6 +10,7 @@ import Blog from './Components/Blogs/Blog';
 import Login from './Components/Login/Login';
 import NotPound from './Components/NotPoundPage/NotPound';
 import Register from './Components/Register/Register';
+import RiqurAuth from './RiqurAuth/RiqurAuth';
 
 function App() {
   return (
@@ -21,8 +22,11 @@ function App() {
         <Route path='/about' element={<About/>}></Route>
         <Route path='/service' element={<Service/>}></Route>
         <Route path='/checkout' element={
+          <RiqurAuth>
+            <CheckOut/>
+          </RiqurAuth>
 
-          <CheckOut/>
+          
         }></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
